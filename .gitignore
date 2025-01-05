@@ -1,0 +1,47 @@
+/bin/
+
+# Eclipse specific files
+.project
+.classpath
+.settings/
+
+# Build folder
+/bin/
+/build/
+
+# Maven specific files (if used)
+target/
+
+# Gradle specific files (if used)
+.gradle/
+build/
+
+# IDE specific files
+*.iml
+.idea/
+*.ipr
+*.iws
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+
+# OS specific files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Generated files
+*.class
+*.jar
+*.war
+*.ear
+
+# User-specific files
+*.prefs
+*.lck
+*.lock
+
