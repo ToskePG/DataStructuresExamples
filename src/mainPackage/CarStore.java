@@ -79,7 +79,11 @@ public class CarStore {
 	
 	// Dodavanje ide isto kao gornje funkcije. Ako nije specijalno napomenuto, dodavanje vrsi na kraj.
 	public boolean addBiggerThanAvg(Car c1) {
-		return true;
+		if(c1.getCarPrice() > this.averagePrice()) {
+			this.addAtEnd(c1);
+			return true;
+		}
+		return false;
 	}
 	
 	public int averagePrice() {
@@ -97,7 +101,6 @@ public class CarStore {
 			sum = sum + temp.getData().getCarPrice();
 			temp = temp.getNext();
 		}
-		System.out.println(counter);
 		return sum/counter;
 	}
 	
