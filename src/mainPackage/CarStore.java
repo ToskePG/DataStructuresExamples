@@ -36,10 +36,42 @@ public class CarStore {
 			return true;
 		}
 		Node temp = head;
-		while(temp != null) {
+		while(temp.getNext() != null) {
 			temp = temp.getNext();
 		}
-		temp = newNode;
+		temp.setNext(newNode);
 		return true;
+	}
+	
+	// LIFO implementacija za ulancanu listu (Last in First out), brise se zadnji Node.
+	public boolean deleteLastNode() {
+		if(isEmpty()) {
+			System.out.println("Lista je vec prazna.");
+			return false;
+		}
+		if(head.getNext() == null) {
+			head = null;
+			return true;
+		}
+		Node temp = head;
+		Node prev = null;
+		while(temp.getNext() != null) {
+			prev = temp;
+			temp = temp.getNext();
+		}
+		prev.setNext(null);
+		return true;
+	}
+	
+	public void displayList() {
+		if(isEmpty()) {
+			System.out.println("Lista je prazna. ");
+			return;
+		}
+		Node temp = head;
+		while(temp != null) {
+			System.out.println(temp.toString());
+			temp = temp.getNext();
+		}
 	}
 }
