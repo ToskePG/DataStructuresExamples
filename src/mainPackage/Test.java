@@ -12,6 +12,7 @@ public class Test {
 		
 		store.displayList();
 		store.deleteLastNode();
+		store.deleteAtStart();
 		System.out.println("------------------------------");
 		
 		store.addAtBegging(c2);
@@ -30,9 +31,7 @@ public class Test {
 		store.displayList();
 		System.out.println("------------------------------");
 		
-		
-		
-		
+		System.out.println(store.averagePrice());
 	}
 
 }

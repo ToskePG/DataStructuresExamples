@@ -63,6 +63,44 @@ public class CarStore {
 		return true;
 	}
 	
+	// FIFO implementacija ulancane liste (First in First out), brise se glava liste. Potrebno je postaviti novu glavu.
+	public boolean deleteAtStart() {
+		if(isEmpty()) {
+			System.out.println("Lista je vec prazna. ");
+			return false;
+		}
+		if(head.getNext() == null) {
+			head = null;
+			return true;
+		}
+		head = head.getNext();
+		return true;
+	}
+	
+	// Dodavanje ide isto kao gornje funkcije. Ako nije specijalno napomenuto, dodavanje vrsi na kraj.
+	public boolean addBiggerThanAvg(Car c1) {
+		return true;
+	}
+	
+	public int averagePrice() {
+		int sum = 0;
+		int counter = 0;
+		if(isEmpty()) {
+			return 0;
+		}
+		if(head.getNext() == null) {
+			return head.getData().getCarPrice();
+		}
+		Node temp = head;
+		while(temp != null) {
+			counter++;
+			sum = sum + temp.getData().getCarPrice();
+			temp = temp.getNext();
+		}
+		System.out.println(counter);
+		return sum/counter;
+	}
+	
 	public void displayList() {
 		if(isEmpty()) {
 			System.out.println("Lista je prazna. ");
