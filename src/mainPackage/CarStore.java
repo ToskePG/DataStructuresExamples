@@ -16,16 +16,15 @@ public class CarStore {
 	}
 	
 	// Dodavanje na pocetak.
-	public boolean addAtBegging(Car c1) {
+	public boolean addAtBeginning(Car c1) {
 		Node newNode = new Node(c1);
 		if(isEmpty()) {
 			head = newNode;
 			return true;
 		}
-		Node temp = head;
-		head = newNode;
-		head.setNext(temp);
-		return true;
+		newNode.setNext(head); // Directly set the new node's next to current head
+	    head = newNode;        // Update head to point to the new node
+	    return true;
 	}
 	
 	// Dodavanje na kraj (Ukoliko u testu nije napomenuto nista dodatno, dodavanje se podrazumijeva da bude na kraj liste!)
@@ -111,8 +110,9 @@ public class CarStore {
 		}
 		Node temp = head;
 		while(temp != null) {
-			System.out.println(temp.toString());
+			System.out.print(temp.toString());
 			temp = temp.getNext();
 		}
+		System.out.println();
 	}
 }

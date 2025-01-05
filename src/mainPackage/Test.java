@@ -15,11 +15,11 @@ public class Test {
 		store.deleteAtStart();
 		System.out.println("------------------------------");
 		
-		store.addAtBegging(c2);
+		store.addAtBeginning(c2);
 		store.displayList();
 		System.out.println("------------------------------");
 		
-		store.addAtBegging(c1);
+		store.addAtBeginning(c1);
 		store.displayList();
 		System.out.println("------------------------------");
 		
