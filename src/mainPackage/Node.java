@@ -3,32 +3,31 @@ package mainPackage;
 public class Node {
 	
 	private Car data;
-	private Node next;
-	
-	Node(Car car){
-		this.data = car;
-		this.next = null;
-	}
+    private Node next;
 
-	public Car getData() {
-		return data;
-	}
+    Node(Car car) {
+        this.data = car;
+        this.next = null;
+    }
 
-	public void setData(Car data) {
-		this.data = data;
-	}
+    public Car getData() {
+        return data;
+    }
 
-	public Node getNext() {
-		return next;
-	}
+    public void setData(Car data) {
+        this.data = data;
+    }
 
-	public void setNext(Node next) {
-		this.next = next;
-	}
+    public Node getNext() {
+        return next;
+    }
 
-	@Override
-	public String toString() {
-		return data.toString() +"->";
-	}
-	
+    public void setNext(Node next) {
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return data.toString();
+    }
 }
