@@ -2,7 +2,7 @@ package mainPackage;
 
 public class CarStore {
 	
-	private Node top; // Pokazuje na vrh steka
+	  private Node top; // Pokazuje na vrh steka
     private String storeName;
 
     public CarStore(String storeName) {
@@ -83,5 +83,4 @@ public class CarStore {
         }
         return false; // Ne dodaje auto ako cena nije veća od prosečne
     }
-
 }

@@ -1,0 +1,39 @@
+### Objašnjenja funkcija za Circular Queue implementaciju
+
+**isEmpty()**  
+- Proverava da li je red prazan.  
+- Ako je `size == 0`, red je prazan.  
+
+**isFull()**  
+- Proverava da li je red pun.  
+- Ako je `size == capacity`, red je pun.  
+
+**enqueue(Car car)**  
+- Dodaje novi auto na kraj reda.  
+- Povećava indeks `rear` sa kružnim efektom pomoću `(rear + 1) % capacity`.  
+- Povećava veličinu reda (`size`).  
+- Ako je red pun, ispisuje poruku i ne dodaje auto.  
+
+**dequeue()**  
+- Uklanja auto sa početka reda.  
+- Postavlja `queue[front]` na `null`.  
+- Povećava indeks `front` sa kružnim efektom pomoću `(front + 1) % capacity`.  
+- Smanjuje veličinu reda (`size`).  
+- Ako je red prazan, ispisuje poruku i ne uklanja auto.  
+
+**peek()**  
+- Vraća auto sa početka reda bez uklanjanja.  
+- Ako je red prazan, vraća `null`.  
+
+**displayQueue()**  
+- Prikazuje sve automobile u redu.  
+- Počinje od `front` i prolazi kroz niz do `rear` koristeći kružni efekat.  
+
+**averagePrice()**  
+- Računa prosečnu cenu automobila u redu.  
+- Prolazi kroz sve elemente reda, sabira cene i deli sa brojem automobila (`size`).  
+- Ako je red prazan, vraća `0`.  
+
+**addBiggerThanAvg(Car car)**  
+- Dodaje auto u red samo ako je njegova cena veća od prosečne cene automobila u redu.  
+- Proverava uslov i koristi funkciju `enqueue` za dodavanje.  
