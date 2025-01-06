@@ -9,6 +9,14 @@ public class CarStore {
         this.storeName = storeName;
         this.top = null; // Stek je inicijalno prazan
     }
+    
+    private String getStoreName() {
+    	return this.storeName;
+    }
+    
+    private void setStoreName(String storeName) {
+    	this.storeName = storeName;
+    }
 
     // Proverava da li je stek prazan
     // Ako je top == null, stek je prazan
@@ -82,6 +90,15 @@ public class CarStore {
             return this.push(car); // Dodaje auto koristeći funkciju push
         }
         return false; // Ne dodaje auto ako cena nije veća od prosečne
+    }
+    
+    public int checkStoreNameLength() {
+    	return this.getStoreName().length();
+    }
+    
+    public void updateStoreName(String storeName) {
+    	System.out.println("New Store name: " +storeName);
+    	this.setStoreName(storeName);
     }
 
 }
