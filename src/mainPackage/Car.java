@@ -48,8 +48,8 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car brand: " + carBrand + "\n" + "Car Price: " + carPrice + "\n" + "Car Color: " + color + "\n" + "Production year: "
-				+ yearOfProduction;
+		return "(Car brand: " + carBrand + ", " + "Car Price: " + carPrice + ", " + "Car Color: " + color + ", " + "Production year: "
+				+ yearOfProduction +")";
 	}
 
 }

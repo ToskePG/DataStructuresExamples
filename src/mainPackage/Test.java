@@ -39,5 +39,4 @@ public class Test {
         queue.addBiggerThanAvg(new Car("Tesla", 9000, "Black", 2022)); // Dodaje Teslu ako je cena > prosečne
         queue.displayQueue(); // Prikazuje red sa dodatim automobilom (ako je uslov ispunjen)
     }
-
 }
